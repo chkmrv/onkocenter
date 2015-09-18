@@ -164,6 +164,10 @@ h6,
 .h6 {
   font-weight: 300;
 }
+h6.small,
+.h6.small {
+  font-size: 13px;
+}
 p {
   margin: 15px 0;
   line-height: 26px;
@@ -178,7 +182,7 @@ a {
   text-align: right;
 }
 .text-center {
-  text-align: center;
+  text-align: center!important;
 }
 .text-smaller {
   font-size: 12px;
@@ -506,6 +510,47 @@ input:hover {
 .services .row .col-7,
 .services .row .col-5 {
   height: 100%;
+}
+/*--PRICES--*/
+
+.table-price {
+  width: 100%;
+}
+.procedure-name {
+  text-align: center;
+}
+.table-price tr:not(.procedure-name) {
+  padding: 10px 0 30px 0;
+}
+.table-price tr:not(.procedure-name) td,
+.table-price th {
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 30px;
+  padding-left: 20px;
+  text-align: left;
+}
+.table-price tr:nth-child(odd) {
+  background-color: #ededed;
+}
+.table-price td:nth-child(1) {
+  width: 60px;
+}
+.table-price td:nth-child(2) {
+  width: 100px;
+}
+.table-price td:nth-child(3) {
+  width: 480px;
+  font-size: 13px;
+}
+.table-price td:nth-child(4) {
+  width: 140px;
+}
+.table-price td:nth-child(5) {
+  width: 90px;
+}
+.table-price td:nth-child(6) {
+  width: 90px;
 }
 /*--MAP--*/
 
