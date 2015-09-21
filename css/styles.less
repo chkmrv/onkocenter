@@ -80,6 +80,29 @@ html, body {
 	background-size: cover;
 }
 
+.search-field {
+	&__img {
+		margin-top: 40px;
+		input {
+			font-size: 20px;
+			border-bottom: 1px solid @clr_tx;
+			opacity: 0;
+			&:hover {
+				border-bottom: 1px solid @clr_tx;
+			}
+		}
+		&::before {
+			content: '';
+			display: inline-block;
+			width: 24px;
+			height: 24px;
+			margin-right: 10px;
+			background: url(../img/search.png) no-repeat;
+			vertical-align: bottom;
+		}
+	}
+}
+
 /*********TYPOGRAPHY**********/
 body {
 	color: #212121;
@@ -439,9 +462,9 @@ input, input:hover {
 
 .table-price tr:not(.procedure-name) td, .table-price th {
 	padding-top: 10px;
-	padding-right: 20px;
+	padding-right: 10px;
 	padding-bottom: 30px;
-	padding-left: 20px;
+	padding-left: 10px;
 	text-align: left;
 }
 
@@ -449,29 +472,12 @@ input, input:hover {
 	background-color: #ededed;
 }
 
-.table-price td:nth-child(1) {
-	width: 60px;
-}
-
-.table-price td:nth-child(2) {
-	width: 100px;
-}
-
-.table-price td:nth-child(3) {
-	width: 480px;
+.table-price td:nth-child(2), .table-price td:nth-child(3) {
 	font-size: 13px;
 }
 
-.table-price td:nth-child(4) {
-	width: 140px;
-}
-
-.table-price td:nth-child(5) {
-	width: 90px;
-}
-
-.table-price td:nth-child(6) {
-	width: 90px;
+.table-price tr td:nth-child(6) {
+	text-align: center!important;
 }
 
 /*--MAP--*/
