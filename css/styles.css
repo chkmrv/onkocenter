@@ -122,6 +122,9 @@ body {
   position: relative;
 }
 /********TEMPLATE*********/
+.danger {
+  color: #c62a2a;
+}
 .bg-pic-blue {
   background: url(../img/bg-personal-cabinet.jpg);
   background-size: cover;
@@ -302,18 +305,12 @@ textarea {
 .link:hover {
   text-decoration: none;
 }
-.link:visited {
-  color: #043555;
-}
 .link_white {
   color: white;
   text-decoration: underline;
 }
 .link_white:hover {
   text-decoration: none;
-}
-.link_white:visited {
-  color: #f2f2f2;
 }
 .link_gray {
   color: #212121;
@@ -667,6 +664,10 @@ textarea {
 .simp-block {
   padding: 85px 0 45px 0;
 }
+.simp-block_bot {
+  padding-top: 20px;
+  padding-bottom: 90px;
+}
 .bg-index {
   background: url(../img/bg-index.jpg) no-repeat;
 }
@@ -740,6 +741,11 @@ textarea {
 }
 .vacancy img {
   margin-top: 38px;
+}
+/*----diagnost-inside---*/
+
+.di-menu li {
+  margin-left: 40px;
 }
 /*--______MAP--_____*/
 

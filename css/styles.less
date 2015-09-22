@@ -77,6 +77,8 @@ html, body {
 @clr_tx: #3a638f;
 @clr_h: #043555;
 
+.danger {color: #c62a2a;}
+
 .bg-pic-blue {
 	background: url(../img/bg-personal-cabinet.jpg);
 	background-size: cover;
@@ -222,17 +224,11 @@ textarea {
 	&:hover {
 		text-decoration: none;
 	}
-	&:visited {
-		color: @clr_h;
-	}
 	&_white {
 		color: #fff;
 		text-decoration: underline;
 		&:hover {
 			text-decoration: none;
-		}
-		&:visited {
-			color: #f2f2f2;
 		}
 	}
 	&_gray {
@@ -588,6 +584,10 @@ textarea {
 /*---INDEX--*/
 .simp-block {
 	padding: 85px 0 45px 0;
+	&_bot {
+		padding-top: 20px;
+		padding-bottom: 90px;
+	}
 }
 
 .bg-index {
@@ -672,6 +672,13 @@ textarea {
 	padding-bottom: 80px;
 	img {
 		margin-top: 38px;
+	}
+}
+
+/*----diagnost-inside---*/
+.di-menu {
+	li {
+		margin-left: 40px;
 	}
 }
 
