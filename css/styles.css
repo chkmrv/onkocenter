@@ -9,19 +9,9 @@
 }
 html,
 body {
-  display: block;
+  display: table;
+  height: 100%;
   width: 100%;
-}
-html {
-  height: 100%;
-}
-.wrapper {
-  display: block;
-  height: 100%;
-  margin-bottom: -84px;
-}
-.pre-footer {
-  margin-top: 84px;
 }
 .col-12 {
   width: 100%;
@@ -91,6 +81,8 @@ html {
 .pull-right {
   float: right;
 }
+.header::after,
+.top::after,
 .container::after,
 .row::after,
 .clearfix::after,
@@ -142,6 +134,9 @@ html {
   color: white;
 }
 .bg-darken .main-menu a {
+  color: white;
+}
+.bg-darken .main-menu a:hover {
   color: white;
 }
 .search-field__img {
@@ -515,7 +510,10 @@ textarea {
   margin: 15px 0;
   padding: 10px 0;
   color: white;
+  border-top: none;
+  border-right: none;
   border-bottom: 1px solid white;
+  border-left: none;
   background: none;
   /* Firefox 19+ */
 
@@ -536,6 +534,9 @@ textarea {
 }
 .entered .block-window .field-sbmt {
   margin-top: 30px;
+}
+.entered .block-window .field-sbmt input {
+  width: 30%;
 }
 .diagnosis {
   margin-bottom: 80px;
@@ -694,6 +695,52 @@ textarea {
 .field:last-child {
   margin-bottom: 0;
 }
+/*----ABOUT-CENTER----*/
+
+.bg-about {
+  background: url(../img/bg-big.jpg) repeat-y;
+  background-size: cover;
+}
+.about {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.about .row {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+.about .row:last-child {
+  margin-top: 150px;
+}
+.about .for-img {
+  position: relative;
+  -webkit-transform: perspective(100px) rotate3d(0, -1, 0, -3deg);
+  -ms-transform: perspective(100px) rotate3d(0, -1, 0, -3deg);
+  transform: perspective(100px) rotate3d(0, -1, 0, -3deg);
+}
+.about .for-img img {
+  max-width: 100%;
+}
+.about .for-img::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(206, 231, 250, 0.42);
+  -webkit-transform: perspective(100px) rotate3d(0, -1, 0, 0deg);
+  -ms-transform: perspective(100px) rotate3d(0, -1, 0, 0deg);
+  transform: perspective(100px) rotate3d(0, -1, 0, 0deg);
+}
+.vacancy {
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+.vacancy img {
+  margin-top: 38px;
+}
 /*--______MAP--_____*/
 
 .mapping {
@@ -817,7 +864,7 @@ textarea {
   background-position: -30px -35px;
 }
 .reviews-slider {
-  margin-top: 165px;
+  margin-top: 132px;
 }
 .reviews-slider .bx-prev,
 .reviews-slider .bx-next {
