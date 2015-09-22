@@ -1,4 +1,10 @@
 $(function() {
+	$('.bxslider').bxSlider({
+		'pager' : false,
+		'nextText' : '>',
+		'prevText' : '<'
+	});
+
 	inputWidth();
 })
 
