@@ -6,22 +6,9 @@
 }
 
 html, body {
-	display: block;
+	display: table;
+	height: 100%;
 	width: 100%;
-}
-
-html {
-	height: 100%;
-}
-
-.wrapper {
-	display: block;
-	height: 100%;
-	margin-bottom: -84px;
-}
-
-.pre-footer {
-	margin-top: 84px;
 }
 
 .col-12 {width: 100%}
@@ -39,7 +26,7 @@ html {
 
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11 {float: left; min-height: 1px;}
 
-
+.offset-col-1 {margin-left:8.33333333%}
 .offset-col-2 {margin-left:16.66666667%}
 .offset-col-3 {margin-left: 25%;}
 .offset-col-4 {margin-left:33.33333333%}
@@ -47,7 +34,7 @@ html {
 .pull-left {float: left;}
 .pull-right {float: right;}
 
-.container::after, .row::after, .clearfix::after, .main::after, .footer::after {
+.header::after, .top::after, .container::after, .row::after, .clearfix::after, .main::after, .footer::after {
 	content: '';
 	display: block;
 	height: 0;
@@ -90,22 +77,25 @@ html {
 @clr_tx: #3a638f;
 @clr_h: #043555;
 
+.danger {color: #c62a2a;}
+
 .bg-pic-blue {
 	background: url(../img/bg-personal-cabinet.jpg);
 	background-size: cover;
 }
 
 .bg-lighten {
-	background-size: cover;
-	background-color: #e8e9e9;
+	background-color: #fafafa;
 }
 
 .bg-darken {
-	background-size: cover;
 	background-color: @clr_main;
 	color: #fff;
 	.main-menu a {
 		color: #fff;
+		&:hover {
+			color: #fff;
+		}
 	}
 }
 
@@ -129,6 +119,17 @@ html {
 			background: url(../img/search.png) no-repeat;
 			vertical-align: bottom;
 		}
+	}
+}
+
+input, textarea {
+	width: 100%;
+	padding: 10px;
+	&:last-child {
+		margin-bottom: 0;
+	}
+	&:focus {
+		border: 1px solid @clr_h;
 	}
 }
 
@@ -188,9 +189,17 @@ ul.list-inline li {display: inline-block;}
 .reg {font-weight: 400;}
 
 /*********GENERAL*********/
-input, input:hover {
-	border: 0;
+input, textarea {
+	border: 1px solid transparent;
 	outline: none;
+}
+
+input:focus, textarea:focus {
+	outline: none;
+} 
+
+textarea {
+	resize: none;
 }
 
 .btn {
@@ -215,17 +224,17 @@ input, input:hover {
 	&:hover {
 		text-decoration: none;
 	}
-	&:visited {
-		color: @clr_h;
-	}
 	&_white {
 		color: #fff;
 		text-decoration: underline;
 		&:hover {
 			text-decoration: none;
 		}
-		&:visited {
-			color: #f2f2f2;
+	}
+	&_gray {
+		color: #212121;
+		&:hover {
+			color: @clr_tx;
 		}
 	}
 }
@@ -260,6 +269,42 @@ input, input:hover {
 		color: @clr_main;
 		font-size: 10px;
 		background-color: transparent;
+	}
+	&_light {
+			content: '►';
+			color: #fff;
+			&::before {
+				content: '►';
+				color: #fff;
+				background-color: transparent;
+			}
+		}
+}
+
+.ask-call {
+	color: @clr_tx;
+	text-decoration: underline;
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+	}
+	&::before {
+		content: '';
+		display: inline-block;
+		width: 31px;
+		height: 32px;
+		background: url(../img/fs-phone.png) no-repeat;
+		vertical-align: middle;
+	}
+}
+
+.btn-send {
+	padding: 5px 20px;
+	color: @clr_tx;
+	border: 1px solid @clr_tx;
+	&:hover {
+		color: #fff;
+		background: @clr_tx;
 	}
 }
 
@@ -397,7 +442,10 @@ input, input:hover {
 			margin: 15px 0;
 			padding: 10px 0;
 			color: #fff;
+			border-top: none;
+			border-right: none;
 			border-bottom: 1px solid #fff;
+			border-left: none;
 			background: none;
 			&::-webkit-input-placeholder {color:#fff;}
 			&::-moz-placeholder          {color:#fff;}/* Firefox 19+ */
@@ -406,6 +454,9 @@ input, input:hover {
 		}
 		.field-sbmt {
 			margin-top: 30px;
+			input {
+				width: 30%;
+			}
 		}
 	}
 }
@@ -531,6 +582,14 @@ input, input:hover {
 }
 
 /*---INDEX--*/
+.simp-block {
+	padding: 85px 0 45px 0;
+	&_bot {
+		padding-top: 20px;
+		padding-bottom: 90px;
+	}
+}
+
 .bg-index {
 	background: url(../img/bg-index.jpg) no-repeat;
 }
@@ -541,13 +600,85 @@ input, input:hover {
 }
 
 .our-specialist {
-	padding: 85px 0;
 	background: url(../img/bg-spec.jpg) no-repeat;
+	background-size: cover;
 }
 
 .spec-slider {
 	img {
 		border-radius: 50%;
+	}
+}
+
+.all-spec {
+	margin: 75px 0 0 0;
+} 
+
+.bg-instr {
+	padding: 140px 0 70px 0;
+	background: url(../img/bg-instr.jpg) no-repeat;
+	background-size: cover;
+} 
+
+.field {
+	margin: 10px 0;
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+/*----ABOUT-CENTER----*/
+.bg-about {
+	background: url(../img/bg-big.jpg) repeat-y;
+	background-size: cover;
+}
+
+.about {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	.row {
+		margin-top: 80px;
+		margin-bottom: 80px;
+		&:last-child {
+			margin-top: 150px;
+		}
+	}
+	.for-img {
+		position: relative;
+		-webkit-transform: perspective(100px) rotate3d(0,-1,0,-3deg);
+		-ms-transform: perspective(100px) rotate3d(0,-1,0,-3deg);
+	    transform: perspective(100px) rotate3d(0,-1,0,-3deg);
+	    img {
+	    	max-width: 100%;
+	    }
+	    &::after {
+	    	content: '';
+	    	display: block;
+	    	position: absolute;
+	    	top: -15px;
+	    	left: 20px;
+	    	width: 100%;
+	    	height: 100%;
+	    	background-color: rgba(206,231,250,0.42);
+	    	-webkit-transform: perspective(100px) rotate3d(0,-1,0,0deg);
+			-ms-transform: perspective(100px) rotate3d(0,-1,0,0deg);
+	    	transform: perspective(100px) rotate3d(0,-1,0,0deg);
+	    }
+	}
+}
+
+.vacancy {
+	padding-top: 40px;
+	padding-bottom: 80px;
+	img {
+		margin-top: 38px;
+	}
+}
+
+/*----diagnost-inside---*/
+.di-menu {
+	li {
+		margin-left: 40px;
 	}
 }
 
@@ -645,17 +776,51 @@ input, input:hover {
 	font-weight: 300;
 	.bx-prev, .bx-next {
 		position: absolute;
-		color: #bababa;
+		background: url(../img/control-sprite.png);
 	}
 }
 
 .spec-slider .bx-controls-direction {
-	top: 6%;
+	top: 13%;
 	font-size: 60px;
+	.bx-prev, .bx-next {
+		width: 25px;
+		height: 30px;
+	}
 	.bx-prev {
 		left: 0;
+		background-position: 0 0;
+		&:hover {
+			background-position: 0 -35px;
+		}
 	}
 	.bx-next {
 		right: 0;
+		background-position: -30px 0;
+		&:hover {
+			background-position: -30px -35px;
+		}
+	}
+}
+
+.reviews-slider {
+	margin-top: 132px;
+	.bx-prev, .bx-next {
+		width: 13px;
+		height: 15px;
+		background-size: 28px;
+	}
+	.bx-prev {
+		left: 0;
+		&:hover {
+			background-position: 0 -18px;
+		}
+	}
+	.bx-next {
+		left: 20px;
+		background-position: -15px 0;
+		&:hover {
+			background-position: -15px -18px;
+		}
 	}
 }
