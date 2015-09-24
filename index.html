@@ -12,6 +12,7 @@
 	<!-- CSS -->
 	<link href="css/styles.css" rel="stylesheet">
 	<link href="css/normalize.min.css" rel="stylesheet">
+	<link href="css/jquery.roll-slider-chkmrv.css" rel="stylesheet">
 
 	<!--[if lt IE 9]>
 	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -40,7 +41,7 @@
 				<div class="container">
 					<div class="col-3">
 						<a href="index.html">
-							<img src="img/logo-white.png" alt=""></a>
+							<img src="img/logo-white.png" alt="logo"></a>
 					</div>
 					<div class="col-9">
 						<nav class="main-menu">
@@ -78,19 +79,60 @@
 			<div class="main">
 				<div class="container">
 					<div class="slide-microscope">
-						<div class="col-3"></div>
-						<div class="col-9">
-							<h2>Состав медицинского оборудования</h2>
-							<p>
-								Флагман диагностики в нашем центре, позитронно-эмиссионная томография, совмещенная с компьютерной томографией (ПЭТ/КТ). Важнейшей структурной составляющей диагностического процесса является наличие собственного циклотронно-радиохимического комплекса по производству радиофармпрепаратов
-							</p>
-							<div class="text-right">
-								<a class="link_white" href="#">Узнать больше</a>
-								<p class="smaller tx-val">Показатели доступности и качества медицинской помощи</p>
-							</div>
+						<div class="slider" id="element">
+							<ul>
+								<li class="show">
+									<div class="col-3"></div>
+									<div class="col-9">
+										<h2>Состав медицинского оборудования</h2>
+										<p>
+											Флагман диагностики в нашем центре, позитронно-эмиссионная томография, совмещенная с компьютерной томографией (ПЭТ/КТ). Важнейшей структурной составляющей диагностического процесса является наличие собственного циклотронно-радиохимического комплекса по производству радиофармпрепаратов
+										</p>
+										<div class="text-right">
+											<a class="link_white" href="#">Узнать больше</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="col-3"></div>
+									<div class="col-9">
+										<h2>медицинского оборудования</h2>
+										<p>
+											 собственного циклотронно-радиохимического комплекса по производству радиофармпрепаратов
+										</p>
+										<div class="text-right">
+											<a class="link_white" href="#">Узнать больше</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="col-3"></div>
+									<div class="col-9">
+										<h2> оборудования</h2>
+										<p>
+											томография, совмещенная с компьютерной томографией (ПЭТ/КТ). Важнейшей структурной составляющей диагностического процесса является наличие собственного циклотронно-радиохимического комплекса по производству радиофармпрепаратов
+										</p>
+										<div class="text-right">
+											<a class="link_white" href="#">Узнать больше</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="col-3"></div>
+									<div class="col-9">
+										<h2>Состав оборудования</h2>
+										<p>
+											Важнейшей структурной составляющей диагностического процесса является наличие собственного циклотронно-радиохимического комплекса по производству радиофармпрепаратов
+										</p>
+										<div class="text-right">
+											<a class="link_white" href="#">Узнать больше</a>
+										</div>
+									</div>
+								</li>
+							</ul>
 						</div>
-
 					</div>
+					<!-- <p class="smaller tx-val">Показатели доступности и качества медицинской помощи</p> -->
 				</div>
 			</div>
 		</div>
@@ -154,10 +196,17 @@
 	<!-- jQuery-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<!--MAP-->
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIIJZzPPw09LLrRgMftulPNw0idzu1AoU"type="text/javascript"></script>
+	<!-- // <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIIJZzPPw09LLrRgMftulPNw0idzu1AoU"type="text/javascript"></script> -->
 	<!--Plugins-->
 	<script src="js/jquery.bxslider.min.js"></script>
 	<!-- main JS -->
 	<script src="js/script.js"></script>
+	<!--Plugins slider main-->
+	<script src="js/jquery.roll-slider-chkmrv.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.slider').rollSliderChkmrv();
+		});
+	</script>
 </body>
 </html>
