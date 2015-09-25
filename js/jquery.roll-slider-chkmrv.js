@@ -1,6 +1,7 @@
  // $('#element').rollSliderChkmrv();
 
 (function( $ ) {
+    setInterval(function(){ $('.pop.nx').click() }, 10000);
     var methods = {
         radius     :     265,
         speed      :     1,
@@ -62,11 +63,13 @@
    
 	function sliderJS (obj, sl) {
 		var ul = $(sl).find("ul");
-        $(sl).find("li").fadeOut("slow");
+        $(sl).find("li").fadeOut("fast");
 		var bl = $(sl).find("li.slider"+obj);
         // $(bl).addClass('show');
         $(bl).fadeIn( 3000, function() {
-            $(bl).fadeIn("slow");
+            $(bl).css({
+                display: 'block'
+            });
         });
 
 		// $(ul).animate({marginLeft: "-"+step*obj}, 500);
