@@ -14,14 +14,14 @@
 	<link href="css/normalize.min.css" rel="stylesheet">
 
 	<!--[if lt IE 9]>
-	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	<![endif]-->
 </head>
 <body>
 	<div class="wrapper">
 		<div class="bg-darken bg-about">
-			<header class="header">
+			<header>
 				<div class="container">
 					<div class="col-2 offset-col-3 text-left">
 						<a href="tel:84732002233">8 (473) 200-22-33</a>
@@ -45,28 +45,28 @@
 						<nav class="main-menu">
 							<ul class="list-unstyled list-inline">
 								<li>
-									<a href="#">О центре</a>
+									<a href="about-center.html">О центре</a>
 								</li>
 								<li>
-									<a href="#">Услуги</a>
+									<a href="services.html">Услуги</a>
 								</li>
 								<li>
-									<a href="#">Диагностика рака</a>
+									<a href="diagnosis.html">Диагностика рака</a>
 								</li>
 								<li>
-									<a href="#">Лечение рака</a>
+									<a href="treatment.html">Лечение рака</a>
 								</li>
 								<li>
-									<a href="#">Партнерам</a>
+									<a href="partners.html">Партнерам</a>
 								</li>
 								<li>
-									<a href="#">Контакты</a>
+									<a href="contacts.html">Контакты</a>
 								</li>
 								<li>
-									<a href="#">Прейскурант цен на медицинские услуги</a>
+									<a href="prices.html">Прейскурант цен на медицинские услуги</a>
 								</li>
 								<li>
-									<a href="#">3D тур</a>
+									<a href="3D.html">3D тур</a>
 								</li>
 							</ul>
 						</nav>
@@ -197,25 +197,29 @@
 			<div class="blue-block">
 				<div class="contacts centredY">
 					<h3>Контакты</h3>
-					<p>г. Воронеж, ул. Остужева, 31 <br>
-						Время работы: 8:00-20:00 (по Москве), <br>
-						выходной: суббота, воскресенье.  <br>
-						тел.: (473) 200-22-33<br>
-						e-mail: office@oncoclinic.su<br>
-						</p>
-						<p>
-							Время работы Call-Центра:<br>
-						без выходных и перерыва<br>
-						с 08:00 до 20:00 (по Москве)<br>
-						</p>
+					<ul class="list-unstyled">
+						<li>г. Воронеж, ул. Остужева, 31</li>
+						<li>Время работы: 8:00-20:00 (по Москве),</li>
+						<li>выходной: суббота, воскресенье.</li>
+						<li>тел.: <a href="tel:+74732002233">(473) 200-22-33</a></li>
+						<li>e-mail: <a href="mailto:office@oncoclinic.su">office@oncoclinic.su</a></li>
+					</ul>
+					<ul class="list-unstyled">
+						<li>Время работы Call-Центра:</li>
+						<li>без выходных и перерыва</li>
+						<li>с 08:00 до 20:00 (по Москве)</li>
+					</ul>			
 				</div>
 			</div>
-			<div id="map_canvas"></div>					
+			<div id="map_canvas"></div>
+			<ul id="testList">
+				<li></li>
+			</ul>				
 		</div>
+		<div class="pre-footer"></div>
 	</div>
 
-	<div class="pre-footer"></div>
-	<footer class="footer">
+	<footer>
 		<div class="container">
 			<div class="col-4 text-left">
 				<div class="table-cell">
@@ -238,7 +242,8 @@
 	<!-- jQuery-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<!--MAP-->
-	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIIJZzPPw09LLrRgMftulPNw0idzu1AoU"type="text/javascript"></script> -->
+	<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBmlQt_YCTz1CCVZhoCZbnJhAriIUdVIKU&sensor=false"></script>
+	<script src="js/map.js"></script>
 	<!--Plugins-->
 	<script src="js/jquery.bxslider.min.js"></script>
 	<!-- main JS -->

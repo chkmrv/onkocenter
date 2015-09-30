@@ -20,7 +20,7 @@
 	</head>
 	<body>
 		<div class="wrapper clearfix">
-		<header class="header">
+		<header>
 			<div class="container">
 				<div class="col-2 offset-col-3 text-left"><a href="tel:84732002233">8 (473) 200-22-33</a></div>
 				<div class="col-3 text-center"><a class="question" href="#">Задать вопрос</a></div>
@@ -34,15 +34,31 @@
 					<div class="col-9">
 						<nav class="main-menu">
 							<ul class="list-unstyled list-inline">
-							<li><a href="#">О центре</a></li>
-							<li><a href="#">Услуги</a></li>
-							<li><a href="#">Диагностика рака</a></li>
-							<li><a href="#">Лечение рака</a></li>
-							<li><a href="#">Партнерам</a></li>
-							<li><a href="#">Контакты</a></li>
-							<li><a href="#">Прейскурант цен на медицинские услуги</a></li>
-							<li><a href="#">3D тур</a></li>
-						</ul>
+								<li>
+									<a href="about-center.html">О центре</a>
+								</li>
+								<li>
+									<a href="services.html">Услуги</a>
+								</li>
+								<li>
+									<a href="diagnosis.html">Диагностика рака</a>
+								</li>
+								<li>
+									<a href="treatment.html">Лечение рака</a>
+								</li>
+								<li>
+									<a href="partners.html">Партнерам</a>
+								</li>
+								<li>
+									<a href="contacts.html">Контакты</a>
+								</li>
+								<li>
+									<a href="prices.html">Прейскурант цен на медицинские услуги</a>
+								</li>
+								<li>
+									<a href="3D.html">3D тур</a>
+								</li>
+							</ul>
 						</nav>
 				</div>
 			</div>
@@ -73,25 +89,28 @@
 			<div class="blue-block">
 				<div class="contacts centredY">
 					<h3>Контакты</h3>
-					<p>г. Воронеж, ул. Остужева, 31 <br>
-						Время работы: 8:00-20:00 (по Москве), <br>
-						выходной: суббота, воскресенье.  <br>
-						тел.: (473) 200-22-33<br>
-						e-mail: office@oncoclinic.su<br>
-						</p>
-						<p>
-							Время работы Call-Центра:<br>
-						без выходных и перерыва<br>
-						с 08:00 до 20:00 (по Москве)<br>
-						</p>
+					<ul class="list-unstyled">
+						<li>г. Воронеж, ул. Остужева, 31</li>
+						<li>Время работы: 8:00-20:00 (по Москве),</li>
+						<li>выходной: суббота, воскресенье.</li>
+						<li>тел.: <a href="tel:+74732002233">(473) 200-22-33</a></li>
+						<li>e-mail: <a href="mailto:office@oncoclinic.su">office@oncoclinic.su</a></li>
+					</ul>
+					<ul class="list-unstyled">
+						<li>Время работы Call-Центра:</li>
+						<li>без выходных и перерыва</li>
+						<li>с 08:00 до 20:00 (по Москве)</li>
+					</ul>			
 				</div>
 			</div>
-			<div id="map_canvas"></div>					
+			<div id="map_canvas"></div>
+			<ul id="testList">
+				<li></li>
+			</ul>
+			<div class="pre-footer"></div>				
 		</div>
 	
-
-	<div class="pre-footer"></div>
-	<footer class="footer">
+	<footer>
 		<div class="container">
 			<div class="col-4 text-left">
 				<div class="table-cell">
@@ -111,163 +130,8 @@
 		<!-- jQuery-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<!--MAP-->
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIIJZzPPw09LLrRgMftulPNw0idzu1AoU"type="text/javascript"></script>
-		<script>
-	var objects = {
-		o1: {
-			coords: [51.701795, 39.17965],
-			title: 'Би-Блок',
-			description: 'остановка памятник славы'
-		},
-		o4: {
-			coords: [51.701795, 39.17965],
-			title: 'Би-Блок',
-			description: 'Ленинский пр-т, 116a'
-		},
-		o5: {
-			coords: [51.716799, 39.17965],
-			title: 'Би-Блок',
-			description: 'остановка 15 квартал'
-		},
-	};
-
-$(function () {
-
-
-	var myMap = new google.maps.Map($('#map_canvas').get(0), {
-
-			center:  new google.maps.LatLng(51.701795, 39.17965),
-			zoom: 12,
-			scrollwheel: false,
-			icon: 'img/marker-red-small.png',
-			styles: [
-			  {
-			    "featureType": "landscape.natural",
-			    "elementType": "geometry.fill",
-			    "stylers": [
-			      { "color": "#000" }
-			    ]
-			  },
-			  {
-				    "featureType": "landscape.man_made",
-				    "stylers": [
-				      { "color": "#000" },
-				      { "visibility": "off" }
-				    ]
-			  },
-			  {
-				    "featureType": "water",
-				    "stylers": [
-				       { "color": "#474856" },
-				      { "saturation": 0 }
-				    ]
-			  },
-			  {
-				    "featureType": "road",
-				    "elementType": "geometry",
-				    "stylers": [
-				      { "color": "#000" }
-				    ]
-			  }
-			 ,{
-				    "elementType": "labels.text.stroke",
-				    "stylers": [
-				      { "visibility": "off" }
-				    ]
-			  }
-				,{
-				    "elementType": "labels.text",
-				    "stylers": [
-				      { "color": "#333333" }
-				    ]
-				  }
-				
-				,{
-				    "featureType": "road.local",
-				    "stylers": [
-				      { "color": "#9f9e9e" }
-				    ]
-				  },
-				 
-				  {
-				    "featureType": "road.local",
-				    "elementType": "labels.text",
-				    "stylers": [
-				      { "color": "#6e3737" }
-				    ]
-				  }
-				,{
-				    "featureType": "transit.station.bus",
-				    "stylers": [
-				      { "saturation": -57 }
-				    ]
-				  }
-				,{
-				    "featureType": "road.highway",
-				    "elementType": "labels.icon",
-				    "stylers": [
-				      { "visibility": "off" }
-				    ]
-				  },{
-				    "featureType": "poi",
-				    "stylers": [
-				      { "visibility": "off" }
-				    ]
-				  }
-			]
-		}),
-		$list = $('#testList'),
-		list = {},
-		balloon = new google.maps.InfoWindow();
-
-		for (var i in objects) {
-			var title = objects[i].title,
-				description = '<div><p>' + title + '</p><p>' + objects[i].description + '</p></div>';
-
-			list[i] = $('<li>', {
-					'class': 'item active'
-				})
-				.data('marker', new google.maps.Marker({
-					position: new google.maps.LatLng(
-						objects[i].coords[0],
-						objects[i].coords[1]
-					),
-					icon: 'img/marker-red-small.png',
-					title: title,
-					id: i
-				}))
-				.data('description', description)
-				.data('balloon', new google.maps.InfoWindow({
-					content: description
-				}))
-				.on('click', function () {
-					var $item = $(this);
-
-					if ($item.hasClass('active')) {
-						$item.data('marker').setMap(null);
-						$item.removeClass('active');
-					} else {
-						$item.data('marker').setMap(myMap);
-						$item.addClass('active');
-					}
-				})
-				.prependTo($list);
-
-			list[i].data('marker').setMap(myMap);
-			google.maps.event.addListener(list[i].data('marker'), 'click', function () {
-				var $item = list[this.id];
-				// $('.place-slider .slide').hide();
-				// $('.place-slider .slide').append('<span>номер -  '+ this.id  +'</span>');
-				
-				balloon.setContent($item.data('description'));
-				balloon.open(myMap, $item.data('marker'));
-
-			  	myMap.setCenter(list[i].data('marker').getPosition());
-			  	myMap.setZoom(13);
-			});
-		}
-	});
-	</script>
+		<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBmlQt_YCTz1CCVZhoCZbnJhAriIUdVIKU&sensor=false"></script>
+		<script src="js/map.js"></script>
 		<!--Plugins-->
 		<!-- main JS -->
 		<script src="js/script.js"></script>

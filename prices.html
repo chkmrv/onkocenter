@@ -20,7 +20,7 @@
 	</head>
 	<body>
 		<div class="wrapper">
-		<header class="header">
+		<header>
 			<div class="container">
 				<div class="col-2 offset-col-3 text-left"><a href="tel:84732002233">8 (473) 200-22-33</a></div>
 				<div class="col-3 text-center"><a class="question" href="#">Задать вопрос</a></div>
@@ -34,15 +34,31 @@
 					<div class="col-9">
 						<nav class="main-menu">
 							<ul class="list-unstyled list-inline">
-							<li><a href="#">О центре</a></li>
-							<li><a href="#">Услуги</a></li>
-							<li><a href="#">Диагностика рака</a></li>
-							<li><a href="#">Лечение рака</a></li>
-							<li><a href="#">Партнерам</a></li>
-							<li><a href="#">Контакты</a></li>
-							<li><a href="#">Прейскурант цен на медицинские услуги</a></li>
-							<li><a href="#">3D тур</a></li>
-						</ul>
+								<li>
+									<a href="about-center.html">О центре</a>
+								</li>
+								<li>
+									<a href="services.html">Услуги</a>
+								</li>
+								<li>
+									<a href="diagnosis.html">Диагностика рака</a>
+								</li>
+								<li>
+									<a href="treatment.html">Лечение рака</a>
+								</li>
+								<li>
+									<a href="partners.html">Партнерам</a>
+								</li>
+								<li>
+									<a href="contacts.html">Контакты</a>
+								</li>
+								<li>
+									<a href="prices.html">Прейскурант цен на медицинские услуги</a>
+								</li>
+								<li>
+									<a href="3D.html">3D тур</a>
+								</li>
+							</ul>
 						</nav>
 				</div>
 			</div>
@@ -144,10 +160,10 @@
 					</tr>
 				</table>
 			</div>
+			<div class="pre-footer"></div>
 		</div>
 	
-	<div class="pre-footer"></div>
-	<footer class="footer">
+	<footer>
 		<div class="container">
 			<div class="col-4 text-left">
 				<div class="table-cell">
@@ -167,26 +183,8 @@
 		<!-- jQuery-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<!--MAP-->
-		<!--script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIIJZzPPw09LLrRgMftulPNw0idzu1AoU"type="text/javascript"></script-->
-		<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=true_or_false&amp;key=AIzaSyDOCAQZ4hj9_6IcPruY46pzuA9Xa4ySN0M" type="text/javascript"></script>
-		
-		<script>
-			function initialize() {     
-    			var myLatlng = new google.maps.LatLng(51.681570, 39.283692);
-    			var myOptions = {
-        			zoom: 8,
-        			center: myLatlng,
-        			mapTypeId: google.maps.MapTypeId.ROADMAP
-    			}
-    			var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions); 
-
-    			var marker = new google.maps.Marker({
-				    position: myLatlng,
-				    map: map,
-				    title:"Hello World!" 
-				});
-			}		
-		</script>
+		<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBmlQt_YCTz1CCVZhoCZbnJhAriIUdVIKU&sensor=false"></script>
+		<script src="js/map.js"></script>
 		<!--Plugins-->
 		<!-- main JS -->
 		<script src="js/script.js"></script>
