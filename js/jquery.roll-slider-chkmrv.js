@@ -1,7 +1,7 @@
  // $('#element').rollSliderChkmrv();
 
 (function( $ ) {
-    setInterval(function(){ $('.pop.nx').click() }, 10000);
+    // setInterval(function(){ $('.pop.nx').click() }, 10000);
     var methods = {
         radius     :     265,
         speed      :     1,
